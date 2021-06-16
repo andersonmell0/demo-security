@@ -22,11 +22,11 @@ public class UsuarioService implements UserDetailsService{
 	private UsuarioRepository repository;
 	
 	@Transactional(readOnly = true)
-	public Usuario buscarPorEmail(String email) {
-		return repository.findByEmail(email);
+	public Usuario buscarPorEmail(String username) {
+		return repository.findByEmail(username);
 	}
 
-	@Override
+	@Override @Transactional(readOnly = true)
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
 		Usuario usuario = buscarPorEmail(username);
 		return new User(
