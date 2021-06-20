@@ -14,7 +14,6 @@ public class MedicoController {
 	// abrir pagina home
 	@GetMapping("/dados")
 	public String abrirPorMedico(Medico medico, ModelMap model) {
-		
 		return "medico/cadastro";
 	}
 	
