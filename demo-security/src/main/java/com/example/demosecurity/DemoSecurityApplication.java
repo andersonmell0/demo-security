@@ -8,7 +8,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 public class DemoSecurityApplication {
 
 	public static void main(String[] args) {		
-		//System.out.println(new BCryptPasswordEncoder().encode("pm123"));		
+		System.out.println("SENHA ENCRIPITADA: "+ new BCryptPasswordEncoder().encode("pm123"));		
 		SpringApplication.run(DemoSecurityApplication.class, args);
 	}
 }
